@@ -1,4 +1,4 @@
-with open("input.txt") as f:
+with open("d1input.txt") as f:
     elf_inventories = f.read().split("\n\n")
     elf_inventories = [
         [int(snack) for snack in elf.split("\n")] for elf in elf_inventories
@@ -13,3 +13,6 @@ print(f"The elf carrying the most calories is carrying {calories_carried[0]} cal
 print(f"The top three elves are carrying {sum(calories_carried[:3])} calories.")
 
 print(f"{calories_carried}")
+
+
+print(f"Number of elves: {len(elf_inventories)}")
