@@ -10,41 +10,6 @@ def create_array():
     return array
 
 
-def find_adjacent_trees(index: tuple):
-    top = index[0] - 1, index[1]
-    bottom = index[0] + 1, index[1]
-    left = index[0], index[1] - 1
-    right = index[0], index[1] + 1
-    return top, bottom, left, right
-
-
-def remove_invalid_values(values):
-    new_value = []
-    for tup in values:
-        valid = True
-        for value in tup:
-            if value < 0 or value > 98:
-                valid = False
-        if valid:
-            new_value.append(tup)
-    return new_value
-
-
-def invalid_values(values):
-    for tup in values:
-        for value in tup:
-            if value < 0 or value > 98:
-                return True
-    return False
-
-
-def is_value_bigger_than_others(tuple, trees, current):
-    for tup in tuple:
-        if trees[tup] < trees[current]:
-            return False
-    return True
-
-
 def get_all_values(array, i, j):
     values_bottom = []
     values_top = []
