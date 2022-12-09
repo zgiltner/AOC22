@@ -54,7 +54,7 @@ for line in moves:
                 rope[i + 1] = tailX + np.sign(distX), tailY + np.sign(distY)
 
         visited2 |= {rope[-1]}
-#part 2 answer
+# part 2 answer
 print(len(visited2))
 
 
