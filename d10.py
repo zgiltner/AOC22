@@ -2,7 +2,7 @@ with open("d10input.txt") as f:
     instructions = f.read().split("\n")
 x, cycle = 1, 1
 twenty, sixty, hundred, oneForty, oneEighty, twoTwenty = 0, 0, 0, 0, 0, 0
-oneToForty, fortyOneToEighty, eightyOneToOneTwenty, OneTwentyOneToOneSixty, oneSixtyOneToTwoHundred, twoHundredOneToTwoHundredForty = [], [], [], [], [], []
+oneToForty, fortyOneToEighty, eightyOneToOneTwenty, oneTwentyOneToOneSixty, oneSixtyOneToTwoHundred, twoHundredOneToTwoHundredForty = [], [], [], [], [], []
 
 
 def tube():
@@ -31,9 +31,9 @@ def tube():
         index = cycle - 121
         pixel = [x - 1, x, x + 1]
         if index in pixel:
-            OneTwentyOneToOneSixty.insert(index, "#")
+            oneTwentyOneToOneSixty.insert(index, "#")
         else:
-            OneTwentyOneToOneSixty.insert(index, ".")
+            oneTwentyOneToOneSixty.insert(index, ".")
     elif cycle < 201:
         index = cycle - 161
         pixel = [x - 1, x, x + 1]
@@ -88,6 +88,6 @@ print(sum([twenty, sixty, hundred, oneForty, oneEighty, twoTwenty]))
 print(oneToForty)
 print(fortyOneToEighty)
 print(eightyOneToOneTwenty)
-print(OneTwentyOneToOneSixty)
+print(oneTwentyOneToOneSixty)
 print(oneSixtyOneToTwoHundred)
 print(twoHundredOneToTwoHundredForty)
