@@ -50,7 +50,7 @@ def tube():
             twoHundredOneToTwoHundredForty.insert(index, ".")
 
 
-def signl():
+def signal():
     global twenty, sixty, hundred, oneForty, oneEighty, twoTwenty
     if cycle == 20:
         twenty = cycle * x
@@ -73,11 +73,11 @@ for line in instructions:
 
     else:
         tube()
-        signl()
-        cycle = cycle + 1
+        signal()
+        cycle += 1
         tube()
-        signl()
-        cycle = cycle + 1
+        signal()
+        cycle += 1
         xvalue = int(line.split()[1])
         x += xvalue
 
